@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="flex items-center flex-col w-screen h-screen text-center">
+      <div
+        id="Calculator"
+        class="bg-slate-700 w-96 h-[500px] mt-6 border-2 rounded-xl"
+      >
+        <input
+          id="display"
+          class="bg-transparent h-12 w-80 text-right my-5 p-2 text-gray-200 placeholder-transparent ring-2 rounded-lg pt-2 ring-gray-500 text-4xl"
+          readonly
+        />
+        <div id="keys" class="grid grid-cols-4 text-xl px-6 py-2 gap-2">
+          <button
+            class="border border-gray-200 bg-amber-400 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-amber-200 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('+')"
+          >
+            +
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('7')"
+          >
+            7
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('8')"
+          >
+            8
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('9')"
+          >
+            9
+          </button>
+          <button
+            class="border border-gray-200 bg-amber-400 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-amber-200 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('-')"
+          >
+            -
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('4')"
+          >
+            4
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('5')"
+          >
+            5
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('6')"
+          >
+            6
+          </button>
+          <button
+            class="border border-gray-200 bg-amber-400 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('*')"
+          >
+            *
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('1')"
+          >
+            1
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('2')"
+          >
+            2
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('3')"
+          >
+            3
+          </button>
+          <button
+            class="border border-gray-200 bg-amber-400 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-amber-200 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('/')"
+          >
+            /
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('0')"
+          >
+            0
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="appendToDisplay('.')"
+          >
+            .
+          </button>
+          <button
+            class="border border-gray-200 bg-gray-200 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            onclick="calculate()"
+          >
+            =
+          </button>
+          <button
+            class="border border-gray-200 bg-amber-400 text-gray-700 rounded-full w-[70px] h-[70px] transition duration-500 ease select-none hover:bg-amber-200 focus:outline-none focus:shadow-outline"
+            onclick="clearDisplay()"
+          >
+            C
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
